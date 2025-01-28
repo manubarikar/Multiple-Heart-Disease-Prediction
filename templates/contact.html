@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Multiple Heart Disease Prediction</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <!-- Boxicons CDN Link -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <nav>
+    <div class="navbar">
+      <i class='bx bx-menu'></i>
+      <div class="logo"><a href="/index">MULTIPLE HEART DISEASE PREDICTION</a></div>
+      <div class="nav-links">
+        <div class="sidebar-logo">
+          <span class="logo-name"></span>
+          <i class='bx bx-x'></i>
+        </div>
+        <ul class="links">
+          <li><a href="/index">HOME</a></li>
+          <li><a href="/about">About Us </a></li>
+          <li>
+            <a href="#">Diseases</a> 
+             <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+            <ul class="htmlCss-sub-menu sub-menu"> 
+               <li class="more">
+                <span><a href="/home1">1. Heart Disease</a>
+
+              </li> 
+              <li class="more">
+                <span><a href="/Prediction2">2. Coronary Heart Disease</a>
+                 
+                </span>
+                 
+              </li> 
+              <li class="more">
+                <span><a href="/Prediction3">3. Coronary 
+                    Artery disease</a>
+                  
+                </span>
+                
+              </li> 
+            </ul> 
+          </li>
+          <li><a href="/models">Models</a></li>
+          <li><a href="/contact">Contact us</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <script>
+    // search-box open close js code
+    let navbar = document.querySelector(".navbar");
+    let searchBox = document.querySelector(".search-box .bx-search");
+    // let searchBoxCancel = document.querySelector(".search-box .bx-x");
+
+    searchBox.addEventListener("click", () => {
+      navbar.classList.toggle("showInput");
+      if (navbar.classList.contains("showInput")) {
+        searchBox.classList.replace("bx-search", "bx-x");
+      } else {
+        searchBox.classList.replace("bx-x", "bx-search");
+      }
+    });
+
+    // sidebar open close js code
+    let navLinks = document.querySelector(".nav-links");
+    let menuOpenBtn = document.querySelector(".navbar .bx-menu");
+    let menuCloseBtn = document.querySelector(".nav-links .bx-x");
+    menuOpenBtn.onclick = function () {
+      navLinks.style.left = "0";
+    }
+    menuCloseBtn.onclick = function () {
+      navLinks.style.left = "-100%";
+    }
+
+
+    // sidebar submenu open close js code
+    let htmlcssArrow = document.querySelector(".htmlcss-arrow");
+    htmlcssArrow.onclick = function () {
+      navLinks.classList.toggle("show1");
+    }
+    let moreArrow = document.querySelector(".more-arrow");
+    moreArrow.onclick = function () {
+      navLinks.classList.toggle("show2");
+    }
+    let jsArrow = document.querySelector(".js-arrow");
+    jsArrow.onclick = function () {
+      navLinks.classList.toggle("show3");
+    }
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      outline: none;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: url('./wallpaperflare.com_wallpaper.jpg') no-repeat top center;
+      background-size: cover;
+      height: 100vh;
+    }
+
+    .wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      max-width: 550px;
+      background: rgb(118, 5, 5);
+      padding: 30px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+    }
+
+    .wrapper .title h1 {
+      color: black;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .contact-form {
+      display: flex;
+    }
+
+    .input-fields {
+      display: flex;
+      flex-direction: column;
+      margin-right: 4%;
+    }
+
+    .input-fields,
+    .msg {
+      width: 48%;
+    }
+
+    .input-fields .input,
+    .msg textarea {
+      margin: 10px 0;
+      background: transparent;
+      border: 0px;
+      border-bottom: 2px solid black;
+      padding: 10px;
+      color: black;
+      width: 100%;
+    }
+
+    .msg textarea {
+      height: 212px;
+      background:rgb(118, 5, 5);
+    }
+
+    ::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: black;
+    }
+
+    ::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #fff;
+    }
+
+    :-ms-input-placeholder {
+      /* IE 10+ */
+      color: #fff;
+    }
+
+    .btn {
+      background: #fff;
+      text-align: center;
+      padding: 15px;
+      border-radius: 5px;
+      color: steelblue;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    @media screen and (max-width: 600px) {
+      .contact-form {
+        flex-direction: column;
+      }
+
+      .msg textarea {
+        height: 80px;
+      }
+
+      .input-fields,
+      .msg {
+        width: 100%;
+      }
+    }
+    
+  </style>
+
+  <div class="wrapper">
+    <div class="title">
+      <h1>contact us form</h1>
+    </div>
+    <div class="contact-form">
+      <div class="input-fields">
+        <form action="https://formspree.io/f/xleygqoj" method="POST">
+        <input type="text" class="input" placeholder="First Name">
+        <input type="text" class="input" placeholder="Last Name">
+        <input type="email" class="input" placeholder="Email Address"><br>
+       
+        <textarea rows="2" cols="60" name="message" placeholder="Enter text" autocomplete="off" required style="background-color: rgb(118, 5, 5); border: none; border-bottom: 2px solid black;"></textarea>
+        <br><button type="submit" style="height: 40px; width: 120px;">Send Message</button>
+       </form>
+      </div>
+     
+    </div>
+  </div>
+
+</body>
+
+</html>

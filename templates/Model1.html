@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Multiple Heart Disease Prediction</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <nav>
+    <div class="navbar">
+      <i class='bx bx-menu'></i>
+      <div class="logo"><a href="/index">MULTIPLE HEART DISEASE PREDICTION</a></div>
+      <div class="nav-links">
+        <div class="sidebar-logo">
+          <span class="logo-name">MULTIPLE HEART DISEASE PREDICTION</span>
+          <i class='bx bx-x'></i>
+        </div>
+        <ul class="links">
+          <li><a href="/home1">HOME</a></li>
+          <li><a href="/about">About Us </a></li>
+          <li>
+            <a href="#">Diseases</a> 
+             <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+            <ul class="htmlCss-sub-menu sub-menu"> 
+               <li class="more">
+                <span><a href="/home1">1. Heart Disease</a>
+
+              </li> 
+              <li class="more">
+                <span><a href="/Prediction2">2. Coronary Heart Disease</a>
+                 
+                </span>
+                 
+              </li> 
+              <li class="more">
+                <span><a href="/Prediction3">3. Coronary 
+                    Artery disease</a>
+                  
+                </span>
+                
+              </li> 
+            </ul> 
+          </li>
+          <li><a href="/models">Models</a></li>
+          <li><a href="/contact">Contact us</a></li>
+         
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <script>
+    
+    let navbar = document.querySelector(".navbar");
+    let searchBox = document.querySelector(".search-box .bx-search");
+    
+
+    searchBox.addEventListener("click", () => {
+      navbar.classList.toggle("showInput");
+      if (navbar.classList.contains("showInput")) {
+        searchBox.classList.replace("bx-search", "bx-x");
+      } else {
+        searchBox.classList.replace("bx-x", "bx-search");
+      }
+    });
+
+    // sidebar open close js code
+    let navLinks = document.querySelector(".nav-links");
+    let menuOpenBtn = document.querySelector(".navbar .bx-menu");
+    let menuCloseBtn = document.querySelector(".nav-links .bx-x");
+    menuOpenBtn.onclick = function () {
+      navLinks.style.left = "0";
+    }
+    menuCloseBtn.onclick = function () {
+      navLinks.style.left = "-100%";
+    }
+
+
+    // sidebar submenu open close js code
+    let htmlcssArrow = document.querySelector(".htmlcss-arrow");
+    htmlcssArrow.onclick = function () {
+      navLinks.classList.toggle("show1");
+    }
+    let moreArrow = document.querySelector(".more-arrow");
+    moreArrow.onclick = function () {
+      navLinks.classList.toggle("show2");
+    }
+    let jsArrow = document.querySelector(".js-arrow");
+    jsArrow.onclick = function () {
+      navLinks.classList.toggle("show3");
+    }
+  </script>
+
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0px;
+        padding: 0px;
+    }
+    h2 {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        color: #333;
+        font-size: 50px;
+    }
+    table {
+        width: 80%;
+        margin: 0 auto;
+        border-collapse: collapse;
+        border-spacing: 0;
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    th, td {
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+    tr:hover {
+        background-color: #f1f1f1;
+    }
+    .raw {
+      background-color: #0a0606;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      
+    }
+    
+</style>
+<br><br><br><br><br><br><br>
+
+<h2>ᴄᴀʀᴅɪᴏᴠᴀꜱᴄᴜʟᴀʀ ᴅɪꜱᴇᴀꜱᴇ</h2>
+<table>
+    <tr>
+        <th>Sl No</th>
+        <th>Models</th>
+        <th>Accuracy</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Logistic Regression</td>
+        <td>89%</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Decision Tree</td>
+        <td>79%</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Support Vector Machine</td>
+        <td>89%</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>K Nearest Neighbor</td>
+        <td>85%</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Random Forest</td>
+        <td>91%</td>
+    </tr>
+</table>
+<br><br><br><br>
+
+
+<center>
+<footer class="raw">
+  
+</footer>
+</center>
+</body>
+
+</html>

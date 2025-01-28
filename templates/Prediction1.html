@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Multiple Heart Disease Prediction</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/static/cardiopat/assets/img/favicon.png" rel="icon">
+  <link href="/static/cardiopat/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/static/cardiopat/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="/static/cardiopat/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/static/cardiopat/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/cardiopat/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/static/cardiopat/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/static/cardiopat/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/static/cardiopat/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/static/cardiopat/assets/css/style.css" rel="stylesheet">
+
+  
+  <style>
+     
+    /* header {
+        font-family: 'Ultra', serif;
+        padding-top: 40;
+        padding-bottom: 40;
+        background-color: white;
+        color: #d8ebb5;
+    } */
+    
+    .btn {
+        background-color: #323232;
+    }
+    
+    
+    input {
+        margin: 0.25rem;
+        border-radius: 0.5rem;
+        text-align: center;
+        width: 35%;
+        background-color: white;
+        width: 300px;
+    }
+    
+    /* @media screen and (max-width: 500px) {
+        input {
+            width: 100%;
+        }
+    } */
+    .gpb
+    {
+      display: flex;
+      margin-left: 250px;
+    }
+    
+        </style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="/index"><span>MULTIPLE HEART DISEASE PREDICTION</span></a></h1>
+        
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="active " href="/home1">Home</a></li>
+          <li><a href="/Dataset1">DataSet</a></li>
+          <li><a href="/Prediction1">Prediction</a></li>
+          <li><a href="/DataAnalytics1">Data Analytics</a></li>
+          <li><a href="/Model1">Model Accuracy</a>
+          </li>
+        </ul>
+
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Our Team Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Prediction</h2>
+        </div>
+
+      </div>
+    </section><!-- End Our Team Section -->
+
+    <div class="container">
+      <form action="/predict2" method="POST">
+
+        <div class="gpb">
+          <div class="ypb">
+         
+          <input type="text" name="Age" placeholder="Age" required="required">
+          <br>
+          <input type="text" name="Sex12" placeholder="Sex(Female=1, Male=0)" required="required">
+          <br>
+          <input type="text" name="ChestPainType" placeholder="ChestPainType" required="required">
+          <br>
+          <input type="text" name="RestingBP" placeholder="RestingBP" required="required">
+          <br>
+          <input type="text" name="Cholesterol" placeholder="Cholesterol" required="required">
+          <br>
+          <input type="text" name="FastingBS" placeholder="FastingBS" required="required">
+          <br>
+        </div>
+        <div class="spb" style="margin-left:50px">
+          <input type="text" name="RestingECG" placeholder="RestingECG" required="required">
+          <br>
+          <input type="text" name="MaxHR" placeholder="MaxHR" required="required">
+          <br>
+
+          <input type="text" name="ExerciseAngina" placeholder="ExerciseAngina" required="required">
+          <br>
+
+          <input type="text" name="Oldpeak" placeholder="Oldpeak" required="required">
+          <br>
+
+          <input type="text" name="ST_Slope" placeholder="ST_Slope" required="required">
+          <br>
+        </div>
+      </div>
+      
+          <button type="submit" class="btn btn-outline-warning" style="margin-left: 580px;">Predict</button>
+         
+
+
+      </form>
+
+      <br>
+      <br>
+
+      <h3 style="margin-left: 300px;"><strong>{{ prediction_text }}</strong></h3>
+
+      
+          <div><a href="https://healthnomic26.herokuapp.com/" class="icon-link">          
+      
+
+
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+
+    
+    <section class="team" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <div class="member-img">
+                <img src="/static/cardiopat/assets/img/team/team-1.jpg" class="img-fluid" alt="">
+
+              </div>
+              <div class="member-info">
+                <h4>Risk Prediction:</h4>
+                <p>ML algorithms can analyze large datasets of patient information to predict the risk of developing
+                  cardiovascular diseases. By considering factors such as age, sex, blood pressure, cholesterol levels,
+                  smoking status, and family history, ML models can provide personalized risk assessments, helping
+                  clinicians identify high-risk individuals who may benefit from early intervention and preventive
+                  measures.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <div class="member-img">
+                <img src="/static/cardiopat/assets/img/team/team-2.jpg" class="img-fluid" alt="">
+
+              </div>
+              <div class="member-info">
+                <h4>Early Detection and Diagnosis:</h4>
+                <p>ML algorithms can analyze various types of medical imaging data, such as electrocardiograms (ECGs),
+                  echocardiograms, and cardiac MRI scans, to detect early signs of cardiovascular diseases. For example,
+                  deep learning algorithms can accurately identify abnormalities in ECG signals indicative of conditions
+                  like arrhythmias, myocardial infarction, and heart failure, enabling early diagnosis and timely
+                  intervention.p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <div class="member-img">
+                <img src="/static/cardiopat/assets/img/team/team-3.jpg" class="img-fluid" alt="">
+
+              </div>
+              <div class="member-info">
+                <h4>Treatment Optimization:</h4>
+                <p>ML can assist clinicians in optimizing treatment strategies for patients with cardiovascular
+                  diseases. By analyzing patient characteristics, medical history, and treatment outcomes, ML models can
+                  recommend personalized treatment plans tailored to individual patients. For instance, ML algorithms
+                  can predict the effectiveness of different medications or interventions for managing conditions like
+                  hypertension or heart failure, helping clinicians make more informed treatment decisions.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <div class="member-img">
+                <img src="/static/cardiopat/assets/img/team/team-4.jpg" class="img-fluid" alt="">
+
+              </div>
+              <div class="member-info">
+                <h4>Remote Monitoring and Management:</h4>
+                <p>ML-based systems can enable remote monitoring of patients with cardiovascular diseases, allowing
+                  clinicians to track patients' health status and detect potential complications in real-time. Wearable
+                  devices equipped with sensors and ML algorithms can continuously monitor vital signs such as heart
+                  rate, blood pressure, and activity levels, alerting both patients and healthcare providers to any
+                  deviations from normal parameters.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <div class="member-img">
+                <img src="/static/cardiopat/assets/img/team/team-5.jpg" class="img-fluid" alt="">
+
+              </div>
+              <div class="member-info">
+                <h4>Healthcare Resource Allocation:</h4>
+                <p>ML can help optimize healthcare resource allocation by predicting healthcare utilization and demand
+                  for cardiovascular services. By analyzing population health data, demographic trends, and healthcare
+                  utilization patterns, ML models can identify high-risk communities or populations in need of targeted
+                  interventions and allocate resources more efficiently to improve access to cardiovascular care.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <div class="member-img">
+                <img src="/static/cardiopat/assets/img/team/team-6.jpg" class="img-fluid" alt="">
+
+              </div>
+              <div class="member-info">
+                <h4>Drug Discovery and Development:</h4>
+                <p>ML techniques, such as virtual screening and molecular modeling, are being used to accelerate the
+                  drug discovery and development process for cardiovascular diseases. By analyzing large databases of
+                  chemical compounds, biological targets, and clinical trial data, ML algorithms can identify potential
+                  drug candidates, predict their efficacy and safety profiles, and optimize drug design, leading to the
+                  development of novel therapeutics for treating cardiovascular conditions.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+   
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="/static/cardiopat/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="/static/cardiopat/assets/vendor/aos/aos.js"></script>
+  <script src="/static/cardiopat/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/cardiopat/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/static/cardiopat/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/static/cardiopat/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/static/cardiopat/assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="/static/cardiopat/assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="/static/cardiopat/assets/js/main.js"></script>
+
+</body>
+
+</html>

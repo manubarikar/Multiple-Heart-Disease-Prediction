@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Multiple Heart Disease Prediction</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/static/cardiopat/assets/img/favicon.png" rel="icon">
+  <link href="/static/cardiopat/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/static/cardiopat/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="/static/cardiopat/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/static/cardiopat/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/cardiopat/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/static/cardiopat/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/static/cardiopat/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/static/cardiopat/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/static/cardiopat/assets/css/style.css" rel="stylesheet">
+
+  
+  <style>
+     body
+     {
+      background-color: #003152;
+     }
+   
+    .btn {
+        background-color: #323232;
+    }
+    
+    
+    input {
+        margin: 0.25rem;
+        border-radius: 0.5rem;
+        text-align: center;
+        width: 35%;
+        background-color: white;
+        width: 300px;
+    }
+    
+    /* @media screen and (max-width: 500px) {
+        input {
+            width: 100%;
+        }
+    } */
+    .gpb
+    {
+      display: flex;
+      margin-left: 350px;
+      margin-top: 40px;
+    }
+    
+        </style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="/index"><span>CONGENITAL HEART DEFECTS DISEASE PREDICTION</span></a></h1>
+        
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          
+          <li><a href="/index">Home</a>
+          </li>
+        </ul>
+
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Our Team Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Prediction</h2>
+        </div>
+
+      </div>
+    </section><!-- End Our Team Section -->
+
+    <div class="container">
+      <form action="/predict4" method="POST">
+
+        <div class="gpb">
+          <div class="ypb">
+         
+          <input type="text" name="sbp	" placeholder="sbp	" required="required">
+          <br>
+          <input type="text" name="tobacco	" placeholder="tobacco	" required="required">
+          <br>
+          <input type="text" name="ldl" placeholder="ldl" required="required">
+          <br>
+          <input type="text" name="adiposity" placeholder="adiposity" required="required">
+          <br>
+         
+        </div>
+        <div class="spb" style="margin-left:50px">
+          <input type="text" name="famhist(Yes=1, No=0)	" placeholder="famhist	" required="required">
+          <br>
+          <input type="text" name="typea" placeholder="typea" required="required">
+          <br>
+          <input type="text" name="alcohol" placeholder="alcohol" required="required">
+          <br>
+          <input type="text" name="age" placeholder="age" required="required">
+          <br>
+         
+          
+        </div>
+      </div>
+      
+          <button type="submit" class="btn btn-outline-warning" style="margin-left: 630px;margin-top: 30px;">Predict</button>
+         
+
+
+      </form>
+
+      <br>
+      <br>
+
+      <h3 style="margin-left: 300px;color: whitesmoke;"><strong>{{ prediction_text }}</strong></h3>
+
+      
+          <div><a href="https://healthnomic26.herokuapp.com/" class="icon-link">          
+     
+
+
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+
+   
+  
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+
+   
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="/static/cardiopat/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="/static/cardiopat/assets/vendor/aos/aos.js"></script>
+  <script src="/static/cardiopat/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/cardiopat/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/static/cardiopat/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/static/cardiopat/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/static/cardiopat/assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="/static/cardiopat/assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="/static/cardiopat/assets/js/main.js"></script>
+
+</body>
+
+</html>

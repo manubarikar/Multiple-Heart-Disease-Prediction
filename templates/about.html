@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Multiple Heart Disease Prediction</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <!-- Boxicons CDN Link -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <nav>
+    <div class="navbar">
+      <i class='bx bx-menu'></i>
+      <div class="logo"><a href="/index">MULTIPLE HEART DISEASE PREDICTION</a></div>
+      <div class="nav-links">
+        <div class="sidebar-logo">
+          <span class="logo-name">MULTIPLE HEART DISEASE PREDICTION</span>
+          <i class='bx bx-x'></i>
+        </div>
+        <ul class="links">
+          <li><a href="/index">HOME</a></li>
+          <li><a href="/about">About Us </a></li>
+          <li>
+            <a href="#">Diseases</a> 
+             <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+            <ul class="htmlCss-sub-menu sub-menu"> 
+               <li class="more">
+                <span><a href="/home1">1. Heart Disease</a>
+
+              </li> 
+              <li class="more">
+                <span><a href="/Prediction2">2. Coronary Heart Disease</a>
+                 
+                </span>
+                 
+              </li> 
+              <li class="more">
+                <span><a href="/Prediction3">3. Coronary 
+                    Artery disease</a>
+                  
+                </span>
+                
+              </li> 
+            </ul> 
+          </li>
+          <li><a href="/models">Models</a></li>
+          <li><a href="/contact">Contact us</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <script>
+    // search-box open close js code
+    let navbar = document.querySelector(".navbar");
+    let searchBox = document.querySelector(".search-box .bx-search");
+    // let searchBoxCancel = document.querySelector(".search-box .bx-x");
+
+    searchBox.addEventListener("click", () => {
+      navbar.classList.toggle("showInput");
+      if (navbar.classList.contains("showInput")) {
+        searchBox.classList.replace("bx-search", "bx-x");
+      } else {
+        searchBox.classList.replace("bx-x", "bx-search");
+      }
+    });
+
+    // sidebar open close js code
+    let navLinks = document.querySelector(".nav-links");
+    let menuOpenBtn = document.querySelector(".navbar .bx-menu");
+    let menuCloseBtn = document.querySelector(".nav-links .bx-x");
+    menuOpenBtn.onclick = function () {
+      navLinks.style.left = "0";
+    }
+    menuCloseBtn.onclick = function () {
+      navLinks.style.left = "-100%";
+    }
+
+
+    // sidebar submenu open close js code
+    let htmlcssArrow = document.querySelector(".htmlcss-arrow");
+    htmlcssArrow.onclick = function () {
+      navLinks.classList.toggle("show1");
+    }
+    let moreArrow = document.querySelector(".more-arrow");
+    moreArrow.onclick = function () {
+      navLinks.classList.toggle("show2");
+    }
+    let jsArrow = document.querySelector(".js-arrow");
+    jsArrow.onclick = function () {
+      navLinks.classList.toggle("show3");
+    }
+  </script>
+
+  <style>
+    #hamBurger {
+      display: none;
+    }
+
+    .button {
+      padding: 7px 10px;
+      color: #fff;
+      animation: none;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+      background-color: rgb(32, 154, 202);
+    }
+
+    #home {
+      width: 100%;
+      padding: 3rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .home-left {
+      height: 300px;
+      position: relative;
+    }
+
+    .home-left img {
+      height: 100%;
+      border-radius: 20px;
+      margin: 50px;
+
+    }
+
+    .home-right {
+      width: 50%;
+    }
+
+    .home-heading {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .home-para {
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      position: relative;
+      width: 0;
+    }
+
+    .btn:hover::after {
+      content: '';
+      height: 4px;
+      position: absolute;
+      background-color: aqua;
+      left: 0;
+      bottom: -10px;
+      animation: width;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+      border-radius: 5px;
+    }
+
+    @keyframes width {
+      0% {
+        width: 0%;
+      }
+
+      100% {
+        width: 100%;
+      }
+    }
+
+    #workFlow {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .heading {
+      margin: 1rem auto;
+      text-align: center;
+    }
+
+    .para {
+      margin: 1rem auto;
+    }
+
+    .num-container {
+      width: 70%;
+      margin: 1rem auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .num-item {
+      font-size: 1.5rem;
+      line-height: 1.4rem;
+      color: rgb(43, 126, 199);
+    }
+
+    /* Our Goal */
+    #goal {
+      width: 80%;
+      margin: 2rem auto;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .goal-left {
+      width: 60%;
+      line-height: 2rem;
+    }
+
+    .goal-left h2 {
+      font-size: 2.4rem;
+    }
+
+    .goal-left p {
+      line-height: 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .goal-left ul {
+      list-style: none;
+      margin-bottom: 1rem;
+    }
+
+    .goal-left ul li::before {
+      line-height: 1.5rem;
+      content: '✓';
+      color: red;
+    }
+
+    .goal-right {
+      position: relative;
+      width: 35%;
+    }
+
+    .goal-right img {
+      width: 100%;
+      cursor: pointer;
+      border-radius: 10px;
+      filter: drop-shadow(3px 4px 5px black);
+      transition: all 0.2s linear;
+    }
+
+    .goal-right img:hover {
+      transform: translateY(-5px);
+      filter: drop-shadow(5px 6px 7px black);
+    }
+
+    .footer {
+      background-color: #f0f0f0;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+  <section id="home">
+    <div class="home-left">
+      <img src="https://media.istockphoto.com/id/1030711480/photo/human-heart-attack.jpg?s=612x612&w=0&k=20&c=_74bnzB2BgQ6XYR0mdgXq84N--qdX8Wk8UXOfqYze1s="
+        alt="life" width="400px">
+    </div>
+    <div class="home-right">
+      <br><br><br>
+      <h2 class="home-heading" align="justify">About US</h2>
+      <p class="home-para">A type of disease that affects the heart or blood vessels. The risk of certain heart diseases may be increased by smoking, high blood pressure, high cholesterol, unhealthy diet, lack of exercise, and obesity. The most common heart disease is coronary artery disease (narrow or blocked coronary arteries), which can lead to chest pain, heart attacks, or stroke. Other heart diseases include congestive heart failure, heart rhythm problems, congenital heart disease (heart disease at birth), and endocarditis (inflamed inner layer of the heart). Also called cardiovascular disease.
+        Cardiovascular diseases (CVDs) are the leading cause of death globally, taking an estimated 17.9 million lives each year. CVDs are a group of disorders of the heart and blood vessels and include coronary heart disease, cerebrovascular disease, rheumatic heart disease and other conditions. More than four out of five CVD deaths are due to heart attacks and strokes, and one third of these deaths occur prematurely in people under 70 years of age.
+
+        The most important behavioural risk factors of heart disease and stroke are unhealthy diet, physical inactivity, tobacco use and harmful use of alcohol. The effects of behavioural risk factors may show up in individuals as raised blood pressure, raised blood glucose, raised blood lipids, and overweight and obesity. These “intermediate risks factors” can be measured in primary care facilities and indicate an increased risk of heart attack, stroke, heart failure and other complications.
+      </p>
+    </div>
+  </section>
+  <!--================== Home Section Ends Here -->
+
+  <!--================== Workflow Section Starts from Here ==================-->
+  <section id="workFlow">
+    <h2 class="heading"> Aim and Objectives</h2>
+    <h2 class="heading"> Aim </h2>
+    <p class="para">The project is to predict the patient having Heart disease or based on certain features using Machine Learning Models.</p>
+  </section>
+  <!--================== Workflow Section Ends Here -->
+
+
+  <!--================== Goal Section Starts from Here ==================-->
+  <section id="goal">
+    <div class="goal-left">
+      <h2>Objectives</h2>
+      <p>The main objective of this project is to explore how Machine Learning algorithms can be used in the diagnosis of heart disease by building an optimized model that can be used to predict heart diseases.</p>
+      <ul>
+        <li> Collection of  Heart Disease Dataset.
+        </li>
+        <li> Data Preprocessing & Feature Extraction.
+        </li>
+        <li> Deploy the Machine Learning Algorithms such as Random Forest, K Nearest Neighbor and Support Vector Machine.  </li>
+        <li> Web application to predict heart disease or Normal.</li>
+      </ul>
+    </div>
+    <div class="goal-right">
+      <img src="https://wallpapercave.com/wp/wp2968506.jpg" alt="wall">
+    </div>
+  </section>
+  <div class="footer">
+    <footer>
+      <p> &copy; 2024 - All rights reserved -  Disease</p>
+     
+    </footer>
+  </div>
+</body>
+
+</html>
